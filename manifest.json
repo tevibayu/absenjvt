@@ -1,27 +1,22 @@
 {
   "name": "JVT Absensi",
   "short_name": "JVT Absensi",
-  "start_url": "/",
-  "scope": "/", 
+  "start_url": "./",
+  "scope": "./", 
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#000",
-  "description": "JVT Absensi Application",
-  "dir": "ltr",
-  "lang": "en-US",
   "orientation": "portrait-primary",
   "icons":[
     {
-      "src": "https://absen.style-mgnt.com/assets/images/favicon/favicon114.png",
+      "src": "/favicon114.png",
       "sizes": "114x114",
       "type": "image/png"
     },
     {
-      "src": "https://absen.style-mgnt.com/assets/images/favicon/favicon228.png",
+      "src": "/favicon228.png",
       "sizes": "228x228",
       "type": "image/png"
     }
-  ],
-  "prefer_related_applications": false,
-  "related_applications": []
+  ]
 }

@@ -77,7 +77,7 @@ unregister: function () {
     wpSwManager.checkForUnregistering();
 })(self, wpSwManager);
 ;(function (self, localforage) {
-    var PRIVATE_NAME = 'christguy-cards-content-dev';
+    var PRIVATE_NAME = 'absenjvt-content-dev';
 
     var CACHE_PREFIX = PRIVATE_NAME + '::';
 
@@ -87,7 +87,7 @@ unregister: function () {
 
         storage: localforage.createInstance({ name: PRIVATE_NAME }),
 
-        resources: "{"+self.registration.scope+": '2020-05-15 10:19:30'}",
+        resources: "{"+self.registration.scope+": '2020-08-04 10:19:30'}",
 
         excludedPaths: [self.registration.exclude],
 

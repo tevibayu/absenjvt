@@ -13,8 +13,8 @@
   <button type="button" onclick="hangUp();">Hang Up</button>
   <br />
   <div id='video-space'>
-   <video id="local-video" autoplay style="width: 240px; height: 180px; border: 1px solid black;"></video>
-   <video id="remote-video" autoplay style="width: 240px; height: 180px; border: 1px solid black;"></video>
+   <video id="local-video" autoplay style="width: 100%; height: 50%; border: 1px solid black;"></video>
+   <video id="remote-video" autoplay style="width: 100%; height: 50%; border: 1px solid black;"></video>
   </div>
 
   <div id="alert"></div>
@@ -69,44 +69,6 @@
   // start local video
   function startVideo() {
 
-    // navigator.getWebcam = (navigator.getUserMedia || navigator.webKitGetUserMedia || navigator.moxGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
-
-    // if (navigator.mediaDevices.getUserMedia) {
-
-    //   navigator.mediaDevices.getUserMedia({  audio: false, video: true })
-    //   .then(function (stream) {
-    //      localStream = stream;
-    //      localVideo.src = window.webkitURL.createObjectURL(stream);
-    //      localVideo.play();
-    //      localVideo.volume = 0;
-    //    },
-    //    function (error) { // error
-    //      console.error('An error occurred: [CODE ' + error.code + ']');
-    //      console.error('An error occurred: [MESS ' + error.message + ']');
-    //      document.getElementById('alert').innerHTML += error.message + '<br>';
-    //      return;
-    //     }
-    //    )
-    //    .catch(function (e) { logError(e.name + ": " + e.message); });
-
-    // }
-    // else {
-    //   navigator.getWebcam({ audio: false, video: true }, 
-    //    function (stream) {
-    //      localStream = stream;
-    //      localVideo.src = window.webkitURL.createObjectURL(stream);
-    //      localVideo.play();
-    //      localVideo.volume = 0;
-    //    },
-    //    function (error) { // error
-    //      console.error('An error occurred: [CODE ' + error.code + ']');
-    //      console.error('An error occurred: [MESS ' + error.message + ']');
-    //      document.getElementById('alert').innerHTML += error.message + '<br>';
-    //      return;
-    //     }
-    //     );
-    // }
-
     document.getElementById('alert').innerHTML += 'Connecting...<br>';
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     var constraints = {audio: false, video: true};
@@ -136,7 +98,7 @@
 
   // stop local video
   function stopVideo() {
-   localVideo.src = "";
+   localVideo.srcObject = "";
    localStream.stop();
   }
 
